@@ -26,4 +26,12 @@ const UserSchema = new Schema({
         default : Date.now
     }
 })
+
+// validation 
+UserSchema.path("name").required(true , "name cannot be blank.")
+UserSchema.path("email").required(true , "email cannot be blank.")
+UserSchema.path("password").required(true , "password cannot be blank.")
+
+
+
 export default model("User" , UserSchema)
