@@ -1,7 +1,6 @@
 import { Application } from "jsr:@oak/oak/application";
 import { Router } from "jsr:@oak/oak/router";
-import authRouter from "./middleware/auth.ts";
-// import client from "./database/mongodbConnection.ts";
+import { authRouter } from "./middleware/router.ts";
 import { DatabaseConnection } from "./database/mongodbConnection.ts"
 //connction to the database
 const run  = async() => {
